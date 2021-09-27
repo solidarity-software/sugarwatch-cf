@@ -5,5 +5,8 @@
   "license": "MIT",
   "devDependencies": {
     "firebase-tools": "^9.18.0"
+  },
+  "scripts": {
+    "deploy": "firebase deploy"
   }
 }
