@@ -86,7 +86,7 @@ export class Dexcom {
     }
 
     for (const watch of watches.docs) {
-      const egvs = new Dexcom(watch.id);
+      const egvs = new Dexcom(watch.get("id"));
       await egvs.authenticate(options);
     }
   }
@@ -99,6 +99,10 @@ export class Dexcom {
     const watches = await admin.firestore()
         .collection("watches")
         .where("id", "==", this.id).get();
+
+    if (watches.size !== 1) {
+      throw new Error("Invalid ID");
+    }
 
     for (const watch of watches.docs) {
       await watch.ref.update({
