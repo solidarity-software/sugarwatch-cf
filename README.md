@@ -1,11 +1,8 @@
 # sugarwatch-cf
 
-**Contributors**:
-Michael Osuna,
-Ramona Ridgewell,
-[Chris Chapman](https://github.com/SeattleChris)
+This project uses [Cloud Functions](https://cloud.google.com/functions) to manage authenticating a user and their Android watch to a [DexCom](https://www.dexcom.com/) glucose monitoring account. The user will authorize the SugarWatch app to collect DexCom data for the glucose monitoring device and manage delivering occasional updates. Updates are potentially every 5 minutes and delivered via their phone data connection to be displayed on their watch as a watch face widget/complication. If the phone & watch are not available, the SugarWatch app will manage retrying to send the data, but only while that data is still relevant.
 
-This project uses [Cloud Functions](https://cloud.google.com/functions) to manage authenticating a user and their Android watch to a [DexCom](https://www.dexcom.com/) glucose monitoring account. The user will authorize the SugarWatch app to collect DexCom data for the glucose monitoring device and manage delivering occasional updates, via their phone data connection, to be displayed on their watch as a watch face widget/complication. If the phone & watch are not available, the SugarWatch app will manage retrying to send the data, but only while that data is still relevant.
+**Contributors**: [Michael Osuna](https://github.com/mikeosunajr), [Chris Chapman](https://github.com/SeattleChris), Ramona Ridgewell,
 
 ## Architecture
 
